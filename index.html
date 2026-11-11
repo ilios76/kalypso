@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kalypso &amp; friends – Πεταλίδες, Σάμος</title>
+<meta name="description" content="Εννέα ανεξάρτητα διαμερίσματα με θέα στη θάλασσα στις Πεταλίδες Σάμου. Nine independent sea-view apartments in Petalides, Samos.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,800;1,300&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1a1a1a;--sun:#f2c811;--sea:#bfe3e8;--sea-d:#2f7f8c;--sand:#fbfaf6;--r:14px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:'Nunito',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.7;font-size:18px;font-weight:300}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sea-d);outline-offset:3px}
+header{position:fixed;inset:0 0 auto;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:10px 5vw;background:rgba(255,255,255,.92);backdrop-filter:blur(8px)}
+header img{height:46px;width:46px;border-radius:50%}
+nav{display:flex;gap:24px;align-items:center;font-weight:600;font-size:16px}
+nav a{text-decoration:none}
+nav a:hover{color:var(--sea-d)}
+.lang{border:2px solid var(--ink);background:none;border-radius:99px;padding:3px 12px;font:inherit;font-weight:800;font-size:14px;cursor:pointer}
+.btn{display:inline-block;background:var(--sun);color:var(--ink);font-weight:800;text-decoration:none;padding:13px 28px;border-radius:99px;border:0;font-size:16px;cursor:pointer;font-family:inherit}
+.btn:hover{background:#ffd93a}
+.btn.ghost{background:none;border:2px solid currentColor;color:inherit;margin-left:8px}
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;padding:110px 5vw 9vh;color:#fff;overflow:hidden;background:#17525c}
+.slide{position:absolute;inset:0;background:center/cover;opacity:0;transition:opacity 1.4s}
+.slide.on{opacity:1}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.55))}
+.hero>div{position:relative;z-index:1}
+.hero h1{font-size:clamp(40px,8vw,88px);line-height:1.02;font-weight:800;max-width:14ch}
+.hero p{font-size:clamp(18px,2.2vw,24px);margin:18px 0 28px;max-width:34ch;font-weight:400}
+section{padding:96px 5vw}
+.wrap{max-width:1050px;margin:auto}
+h2{font-size:clamp(30px,4.5vw,46px);line-height:1.15;font-weight:800;margin-bottom:18px}
+.lead{max-width:60ch;margin-bottom:40px}
+.intro{text-align:center}
+.intro .lead{margin:0 auto}
+.apts{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+.apt img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r)}
+.apt h3{font-size:26px;margin:16px 0 0;font-weight:800}
+.cap{font-weight:800;color:var(--sea-d)}
+.apt ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 18px}
+.apt li{background:var(--sand);border:1px solid #ece9df;border-radius:99px;padding:2px 12px;font-size:14px;font-weight:600}
+.sub{font-size:22px;margin:56px 0 14px;font-weight:800}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r)}
+.why{background:var(--sand)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:34px}
+.cols h3{font-size:20px;font-weight:800;margin-bottom:6px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.tile{position:relative;aspect-ratio:3/4;border-radius:var(--r);overflow:hidden;color:#fff}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tile div{position:absolute;inset:auto 0 0;padding:70px 22px 22px;background:linear-gradient(transparent,rgba(0,0,0,.6))}
+.tile h3{font-size:24px;font-weight:800}
+.tile p{font-size:15px;font-weight:400}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:50px}
+form{display:grid;gap:14px;max-width:560px}
+label{font-weight:600;font-size:15px;display:grid;gap:4px}
+input,textarea{font:inherit;font-weight:400;padding:12px 14px;border:2px solid #d9d9d2;border-radius:12px;background:#fff}
+input:focus,textarea:focus{border-color:var(--sea-d);outline:none}
+.wa{background:#25d366;color:#fff}
+.wa:hover{background:#1fb858}
+.direct p{margin:6px 0}
+footer{text-align:center;padding:36px 5vw;font-size:14px;background:var(--ink);color:#ddd}
+.hp{position:absolute;left:-9999px}
+[data-en]{display:none}
+html[lang=en] [data-en]{display:revert}
+html[lang=en] [data-el]{display:none}
+@media(max-width:640px){nav a.hide{display:none}.btn.ghost{margin:10px 0 0}.gal{grid-template-columns:repeat(2,1fr);gap:8px}.tile{aspect-ratio:4/3}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.slide{transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="#top" aria-label="Kalypso &amp; friends"><img src="logo.png" alt="Kalypso &amp; friends Samos"></a>
+  <nav>
+    <a class="hide" href="#apartments"><span data-el>Διαμερίσματα</span><span data-en>Apartments</span></a>
+    <a class="hide" href="#island"><span data-el>Το νησί</span><span data-en>The island</span></a>
+    <a class="hide" href="#contact"><span data-el>Επικοινωνία</span><span data-en>Contact</span></a>
+    <!-- BOOKING: όταν έρθει το plugin, άλλαξε το href σε όλα τα a[data-book] -->
+    <a class="btn" data-book href="#contact"><span data-el>Κράτηση</span><span data-en>Book</span></a>
+    <button class="lang" id="lang" aria-label="Language">EN</button>
+  </nav>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="slide on" style="background-image:url(img/hero.jpg);background-position:center 42%"></div>
+  <div class="slide" style="background-image:url(img/in-terrace.jpg)"></div>
+  <div class="slide" style="background-image:url(img/isl-beach.jpg);background-position:center 60%"></div>
+  <div>
+    <h1><span data-el>Καλοκαίρι στη Σάμο, χωρίς βιασύνη.</span><span data-en>Summer in Samos, no rush.</span></h1>
+    <p><span data-el>Διαμερίσματα με θέα στη θάλασσα, στις Πεταλίδες.</span><span data-en>Sea-view apartments in Petalides.</span></p>
+    <a class="btn" data-book href="#contact"><span data-el>Ζητήστε διαθεσιμότητα</span><span data-en>Check availability</span></a>
+    <a class="btn ghost" href="#apartments"><span data-el>Δείτε τα διαμερίσματα</span><span data-en>See the apartments</span></a>
+  </div>
+</div>
+
+<section class="intro">
+  <div class="wrap">
+    <h2><span data-el>Kalypso &amp; friends</span><span data-en>Kalypso &amp; friends</span></h2>
+    <p class="lead"><span data-el>Εννέα ανεξάρτητα, κλιματιζόμενα διαμερίσματα στις Πεταλίδες, με εξοπλισμένη κουζίνα, Wi-Fi και μπαλκόνι με θέα στη θάλασσα. Ένα απλό, ήσυχο μέρος για καλοκαίρι με φίλους και οικογένεια.</span><span data-en>Nine independent, air-conditioned apartments in Petalides, each with a fully equipped kitchen, Wi-Fi and a balcony facing the sea. A simple, quiet base for a summer with friends and family.</span></p>
+  </div>
+</section>
+
+<section id="apartments">
+  <div class="wrap">
+    <h2><span data-el>Τα διαμερίσματά μας</span><span data-en>Our apartments</span></h2>
+    <div class="apts">
+      <article class="apt">
+        <img src="img/apt-double.jpg" alt="Δίκλινο διαμέρισμα με μπαλκόνι / Double apartment with balcony" loading="lazy">
+        <h3><span data-el>Δίκλινα διαμερίσματα</span><span data-en>Double apartments</span></h3>
+        <p class="cap"><span data-el>5 διαμερίσματα, έως 2 άτομα</span><span data-en>5 apartments, up to 2 guests</span></p>
+        <ul><li>A/C</li><li>Wi-Fi</li><li><span data-el>Εξοπλισμένη κουζίνα</span><span data-en>Equipped kitchen</span></li><li><span data-el>Μπαλκόνι με θέα θάλασσα</span><span data-en>Sea-view balcony</span></li></ul>
+        <a class="btn" data-book href="#contact"><span data-el>Ζητήστε διαθεσιμότητα</span><span data-en>Check availability</span></a>
+      </article>
+      <article class="apt">
+        <img src="img/apt-quad.jpg" alt="Τετράκλινο διαμέρισμα με κουζίνα / Quad apartment with kitchen" loading="lazy">
+        <h3><span data-el>Τετράκλινα διαμερίσματα</span><span data-en>Quad apartments</span></h3>
+        <p class="cap"><span data-el>4 διαμερίσματα, έως 4 άτομα</span><span data-en>4 apartments, up to 4 guests</span></p>
+        <ul><li>A/C</li><li>Wi-Fi</li><li><span data-el>Εξοπλισμένη κουζίνα</span><span data-en>Equipped kitchen</span></li><li><span data-el>Μπαλκόνι με θέα θάλασσα</span><span data-en>Sea-view balcony</span></li></ul>
+        <a class="btn" data-book href="#contact"><span data-el>Ζητήστε διαθεσιμότητα</span><span data-en>Check availability</span></a>
+      </article>
+    </div>
+    <h3 class="sub"><span data-el>Μέσα στα διαμερίσματα</span><span data-en>Inside the apartments</span></h3>
+    <div class="gal">
+      <img src="img/in-room.jpg" alt="Δωμάτιο / Room" loading="lazy">
+      <img src="img/in-kitchen.jpg" alt="Κουζίνα / Kitchen" style="object-position:center 55%" loading="lazy">
+      <img src="img/in-terrace.jpg" alt="Βεράντα με θέα θάλασσα / Terrace with sea view" loading="lazy">
+      <img src="img/in-breakfast.jpg" alt="Πρωινό στο μπαλκόνι / Breakfast on the balcony" loading="lazy">
+      <img src="img/in-bed.jpg" alt="Κρεβάτια / Beds" loading="lazy">
+      <img src="img/out-building.jpg" alt="Τα διαμερίσματα στο λιόγερμα / The apartments at sunset" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <h2><span data-el>Γιατί εδώ</span><span data-en>Why stay here</span></h2>
+    <div class="cols">
+      <div><h3><span data-el>Θέα στη θάλασσα</span><span data-en>Sea views</span></h3><p><span data-el>Κάθε διαμέρισμα έχει δικό του μπαλκόνι με θέα, για πρωινό και ηλιοβασίλεμα.</span><span data-en>Every apartment has its own balcony facing the sea, for breakfast and sunsets.</span></p></div>
+      <div><h3><span data-el>Ανεξάρτητα και άνετα</span><span data-en>Independent and comfortable</span></h3><p><span data-el>Κλιματισμός, εξοπλισμένη κουζίνα και Wi-Fi σε όλα τα διαμερίσματα.</span><span data-en>Air-conditioning, an equipped kitchen and Wi-Fi in every apartment.</span></p></div>
+      <div><h3><span data-el>Καφέ-εστιατόριο από κάτω</span><span data-en>Café-restaurant downstairs</span></h3><p><span data-el>Καφές και φαγητό ακριβώς κάτω από τα διαμερίσματα.</span><span data-en>Coffee and food right below the apartments.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="island">
+  <div class="wrap">
+    <h2><span data-el>Η Σάμος και γύρω της</span><span data-en>Samos &amp; around</span></h2>
+    <p class="lead"><span data-el>Πράσινο νησί με βοτσαλωτές παραλίες, βουνά και αμπέλια. Εδώ θα μπουν οι δικές σας προτάσεις.</span><span data-en>A green island of pebble beaches, mountains and vineyards. Your own tips will go here.</span></p>
+    <div class="tiles">
+      <div class="tile"><img src="img/isl-beach.jpg" alt="Παραλία / Beach" style="object-position:center 60%" loading="lazy"><div><h3><span data-el>Παραλίες</span><span data-en>Beaches</span></h3><p><span data-el>Οι αγαπημένες σας παραλίες.</span><span data-en>Your favourite beaches.</span></p></div></div>
+      <div class="tile"><img src="img/isl-mountain.jpg" alt="Βουνό / Mountains" loading="lazy"><div><h3><span data-el>Φύση</span><span data-en>Nature</span></h3><p><span data-el>Πεζοπορίες και χωριά.</span><span data-en>Hikes and villages.</span></p></div></div>
+      <div class="tile"><img src="img/isl-vineyard.jpg" alt="Αμπέλια / Vineyard" loading="lazy"><div><h3><span data-el>Φαγητό και κρασί</span><span data-en>Food &amp; wine</span></h3><p><span data-el>Ταβέρνες και οινοποιεία.</span><span data-en>Tavernas and wineries.</span></p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact">
+    <div>
+      <h2><span data-el>Μιλήστε μαζί μας</span><span data-en>Get in touch</span></h2>
+      <p class="lead"><span data-el>Πείτε μας ημερομηνίες και αριθμό ατόμων και θα σας απαντήσουμε σύντομα.</span><span data-en>Tell us your dates and number of guests and we’ll reply soon.</span></p>
+      <div class="direct">
+        <p><a class="btn wa" href="https://wa.me/306977542647" target="_blank" rel="noopener">WhatsApp</a></p>
+        <p>✉️ <a href="mailto:samos.kalypso@gmail.com">samos.kalypso@gmail.com</a></p>
+        <p>📞 <a href="tel:+306977542647">+30 697 754 2647</a></p>
+        <p>📍 <a href="https://www.google.com/maps/search/?api=1&query=Petalides+Samos" target="_blank" rel="noopener"><span data-el>Πεταλίδες, Σάμος</span><span data-en>Petalides, Samos</span></a></p>
+      </div>
+    </div>
+    <form name="contact" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact">
+      <p class="hp"><label>Don't fill: <input name="bot-field"></label></p>
+      <label><span data-el>Όνομα</span><span data-en>Name</span><input name="name" required autocomplete="name"></label>
+      <label>Email<input type="email" name="email" required autocomplete="email"></label>
+      <label><span data-el>Ημερομηνίες (από – έως)</span><span data-en>Dates (from – to)</span><input name="dates"></label>
+      <label><span data-el>Αριθμός ατόμων</span><span data-en>Guests</span><input type="number" name="guests" min="1"></label>
+      <label><span data-el>Μήνυμα</span><span data-en>Message</span><textarea name="message" rows="4"></textarea></label>
+      <button class="btn" type="submit"><span data-el>Αποστολή</span><span data-en>Send</span></button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>© Kalypso &amp; friends · Πεταλίδες, Σάμος / Petalides, Samos</footer>
+
+<script>
+const root=document.documentElement,btn=document.getElementById('lang');
+let saved;try{saved=localStorage.getItem('lang')}catch(e){}
+set(saved||((navigator.language||'el').startsWith('el')?'el':'en'));
+function set(l){root.lang=l;btn.textContent=l==='el'?'EN':'EL';try{localStorage.setItem('lang',l)}catch(e){}}
+btn.onclick=()=>set(root.lang==='el'?'en':'el');
+const sl=[...document.querySelectorAll('.slide')];let i=0;
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches)setInterval(()=>{sl[i].classList.remove('on');i=(i+1)%sl.length;sl[i].classList.add('on')},6000);
+</script>
+</body>
+</html>
