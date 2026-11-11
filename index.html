@@ -65,6 +65,7 @@ input:focus,textarea:focus{border-color:var(--sea-d);outline:none}
 .wa{background:#25d366;color:#fff}
 .wa:hover{background:#1fb858}
 .direct p{margin:6px 0}
+.map{width:100%;height:380px;border:0;border-radius:var(--r);margin-top:56px;background:var(--sand)}
 footer{text-align:center;padding:36px 5vw;font-size:14px;background:var(--ink);color:#ddd}
 .hp{position:absolute;left:-9999px}
 [data-en]{display:none}
@@ -154,7 +155,7 @@ html[lang=en] [data-el]{display:none}
 <section id="island">
   <div class="wrap">
     <h2><span data-el>Η Σάμος και γύρω της</span><span data-en>Samos &amp; around</span></h2>
-    <p class="lead"><span data-el>Πράσινο νησί με βοτσαλωτές παραλίες, βουνά και αμπέλια. Εδώ θα ζωντανέψουν οι δικές σας στιγμές.</span><span data-en>A green island of pebble beaches, mountains and vineyards. Your own moments will go live here.</span></p>
+    <p class="lead"><span data-el>Πράσινο νησί με βοτσαλωτές παραλίες, βουνά και αμπέλια. Εδώ θα μπουν οι δικές σας προτάσεις.</span><span data-en>A green island of pebble beaches, mountains and vineyards. Your own tips will go here.</span></p>
     <div class="tiles">
       <div class="tile"><img src="img/isl-beach.jpg" alt="Παραλία / Beach" style="object-position:center 60%" loading="lazy"><div><h3><span data-el>Παραλίες</span><span data-en>Beaches</span></h3><p><span data-el>Οι αγαπημένες σας παραλίες.</span><span data-en>Your favourite beaches.</span></p></div></div>
       <div class="tile"><img src="img/isl-mountain.jpg" alt="Βουνό / Mountains" loading="lazy"><div><h3><span data-el>Φύση</span><span data-en>Nature</span></h3><p><span data-el>Πεζοπορίες και χωριά.</span><span data-en>Hikes and villages.</span></p></div></div>
@@ -185,6 +186,10 @@ html[lang=en] [data-el]{display:none}
       <label><span data-el>Μήνυμα</span><span data-en>Message</span><textarea name="message" rows="4"></textarea></label>
       <button class="btn" type="submit"><span data-el>Αποστολή</span><span data-en>Send</span></button>
     </form>
+  </div>
+  <div class="wrap">
+    <!-- ΧΑΡΤΗΣ: για ακριβή καρφίτσα, Google Maps > Κοινοποίηση > Ενσωμάτωση χάρτη, και αντικατάστησε το src -->
+    <iframe class="map" title="Χάρτης / Map – Petalides, Samos" src="https://maps.google.com/maps?q=Petalides,+Samos,+Greece&amp;z=14&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
   </div>
 </section>
 </main>
