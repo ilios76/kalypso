@@ -8,17 +8,17 @@
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,800;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#1a1a1a;--sun:#f2c811;--sea:#bfe3e8;--sea-d:#2f7f8c;--sand:#fbfaf6;--r:14px}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
-body{font-family:'Nunito',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.7;font-size:18px;font-weight:300}
+body{font-family:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:#fff;line-height:1.7;font-size:18px;font-weight:300}
 img{max-width:100%;display:block}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--sea-d);outline-offset:3px}
-header{position:fixed;inset:0 0 auto;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:10px 5vw;background:rgba(255,255,255,.92);backdrop-filter:blur(8px)}
-header img{height:46px;width:46px;border-radius:50%}
+header{position:fixed;inset:0 0 auto;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:8px 5vw;background:rgba(255,255,255,.94);backdrop-filter:blur(8px)}
+header img{height:84px;width:84px}
 nav{display:flex;gap:24px;align-items:center;font-weight:600;font-size:16px}
 nav a{text-decoration:none}
 nav a:hover{color:var(--sea-d)}
@@ -26,11 +26,11 @@ nav a:hover{color:var(--sea-d)}
 .btn{display:inline-block;background:var(--sun);color:var(--ink);font-weight:800;text-decoration:none;padding:13px 28px;border-radius:99px;border:0;font-size:16px;cursor:pointer;font-family:inherit}
 .btn:hover{background:#ffd93a}
 .btn.ghost{background:none;border:2px solid currentColor;color:inherit;margin-left:8px}
-.hero{position:relative;min-height:100svh;display:grid;align-items:end;padding:110px 5vw 9vh;color:#fff;overflow:hidden;background:#17525c}
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;padding:150px 5vw 9vh;color:#fff;overflow:hidden;background:#17525c}
 .slide{position:absolute;inset:0;background:center/cover;opacity:0;transition:opacity 1.4s}
 .slide.on{opacity:1}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.55))}
-.hero>div{position:relative;z-index:1}
+.hero>.txt{position:relative;z-index:1}.badge{width:220px;height:220px;margin-bottom:22px;filter:drop-shadow(0 6px 18px rgba(0,0,0,.35))}
 .hero h1{font-size:clamp(40px,8vw,88px);line-height:1.02;font-weight:800;max-width:14ch}
 .hero p{font-size:clamp(18px,2.2vw,24px);margin:18px 0 28px;max-width:34ch;font-weight:400}
 section{padding:96px 5vw}
@@ -70,7 +70,7 @@ footer{text-align:center;padding:36px 5vw;font-size:14px;background:var(--ink);c
 [data-en]{display:none}
 html[lang=en] [data-en]{display:revert}
 html[lang=en] [data-el]{display:none}
-@media(max-width:640px){nav a.hide{display:none}.btn.ghost{margin:10px 0 0}.gal{grid-template-columns:repeat(2,1fr);gap:8px}.tile{aspect-ratio:4/3}}
+@media(max-width:640px){.badge{width:150px;height:150px}nav a.hide{display:none}.btn.ghost{margin:10px 0 0}.gal{grid-template-columns:repeat(2,1fr);gap:8px}.tile{aspect-ratio:4/3}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.slide{transition:none}}
 </style>
 </head>
@@ -93,8 +93,9 @@ html[lang=en] [data-el]{display:none}
   <div class="slide on" style="background-image:url(img/hero.jpg);background-position:center 42%"></div>
   <div class="slide" style="background-image:url(img/in-terrace.jpg)"></div>
   <div class="slide" style="background-image:url(img/isl-beach.jpg);background-position:center 60%"></div>
-  <div>
-    <h1><span data-el>Καλοκαίρι στη Σάμο και το μπλέ του Αιγαίου.</span><span data-en>Summer in Samos, into th Aegean blue.</span></h1>
+  <div class="txt">
+    <img class="badge" src="logo.png" alt="Kalypso &amp; friends Samos">
+    <h1><span data-el>Καλοκαίρι στη Σάμο και το μπλε του Αιγαίου.</span><span data-en>Summer in Samosand the Aegean blue.</span></h1>
     <p><span data-el>Διαμερίσματα με θέα στη θάλασσα, στις Πεταλίδες.</span><span data-en>Sea-view apartments in Petalides.</span></p>
     <a class="btn" data-book href="#contact"><span data-el>Ζητήστε διαθεσιμότητα</span><span data-en>Check availability</span></a>
     <a class="btn ghost" href="#apartments"><span data-el>Δείτε τα διαμερίσματα</span><span data-en>See the apartments</span></a>
@@ -153,7 +154,7 @@ html[lang=en] [data-el]{display:none}
 <section id="island">
   <div class="wrap">
     <h2><span data-el>Η Σάμος και γύρω της</span><span data-en>Samos &amp; around</span></h2>
-    <p class="lead"><span data-el>Πράσινο νησί με βοτσαλωτές παραλίες, βουνά και αμπέλια. Εδώ θα μπουν οι δικές σας προτάσεις.</span><span data-en>A green island of pebble beaches, mountains and vineyards. Your own tips will go here.</span></p>
+    <p class="lead"><span data-el>Πράσινο νησί με βοτσαλωτές παραλίες, βουνά και αμπέλια. Εδώ θα ζωντανέψουν οι δικές σας στιγμές.</span><span data-en>A green island of pebble beaches, mountains and vineyards. Your own moments will go live here.</span></p>
     <div class="tiles">
       <div class="tile"><img src="img/isl-beach.jpg" alt="Παραλία / Beach" style="object-position:center 60%" loading="lazy"><div><h3><span data-el>Παραλίες</span><span data-en>Beaches</span></h3><p><span data-el>Οι αγαπημένες σας παραλίες.</span><span data-en>Your favourite beaches.</span></p></div></div>
       <div class="tile"><img src="img/isl-mountain.jpg" alt="Βουνό / Mountains" loading="lazy"><div><h3><span data-el>Φύση</span><span data-en>Nature</span></h3><p><span data-el>Πεζοπορίες και χωριά.</span><span data-en>Hikes and villages.</span></p></div></div>
