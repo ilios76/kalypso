@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kalypso &amp; friends – Πεταλίδες, Σάμος</title>
-<meta name="description" content="Εννέα ανεξάρτητα διαμερίσματα με θέα στη θάλασσα στις Πεταλίδες Σάμου. Nine independent sea-view apartments in Petalides, Samos.">
+<meta name="description" content="Εννέα διαμερίσματα και μία βίλα με θέα στη θάλασσα στις Πεταλίδες Σάμου. Nine sea-view apartments and a villa in Petalides, Samos.">
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,19 +26,19 @@ nav a:hover{color:var(--sea-d)}
 .btn{display:inline-block;background:var(--sun);color:var(--ink);font-weight:800;text-decoration:none;padding:13px 28px;border-radius:99px;border:0;font-size:16px;cursor:pointer;font-family:inherit}
 .btn:hover{background:#ffd93a}
 .btn.ghost{background:none;border:2px solid currentColor;color:inherit;margin-left:8px}
-.hero{position:relative;min-height:100svh;display:grid;align-items:end;padding:150px 5vw 9vh;color:#fff;overflow:hidden;background:#17525c}
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;padding:130px 5vw 9vh;color:#fff;overflow:hidden;background:#17525c}
 .slide{position:absolute;inset:0;background:center/cover;opacity:0;transition:opacity 1.4s}
 .slide.on{opacity:1}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.55))}
 .hero>.txt{position:relative;z-index:1}.badge{width:220px;height:220px;margin-bottom:22px;filter:drop-shadow(0 6px 18px rgba(0,0,0,.35))}
-.hero h1{font-size:clamp(40px,8vw,88px);line-height:1.02;font-weight:800;max-width:14ch}
-.hero p{font-size:clamp(18px,2.2vw,24px);margin:18px 0 28px;max-width:34ch;font-weight:400}
+.hero h1{font-size:clamp(34px,6.2vw,76px);line-height:1.05;font-weight:800;max-width:18ch}
+.hero p{font-size:clamp(18px,2.2vw,24px);margin:18px 0 28px;max-width:40ch;font-weight:400}
 section{padding:96px 5vw}
 .wrap{max-width:1050px;margin:auto}
 h2{font-size:clamp(30px,4.5vw,46px);line-height:1.15;font-weight:800;margin-bottom:18px}
-.lead{max-width:60ch;margin-bottom:40px}
+.lead{max-width:60ch;margin-bottom:40px}.lead+.lead{margin-top:-20px}
 .intro{text-align:center}
-.intro .lead{margin:0 auto}
+.intro .lead{margin:0 auto 18px}.tag{font-size:clamp(20px,2.6vw,26px);font-weight:600;margin-bottom:16px}.intro .gal{margin-top:44px}.gal.six img{aspect-ratio:1}
 .apts{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
 .apt img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r)}
 .apt h3{font-size:26px;margin:16px 0 0;font-weight:800}
@@ -60,11 +60,13 @@ h2{font-size:clamp(30px,4.5vw,46px);line-height:1.15;font-weight:800;margin-bott
 .contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:50px}
 form{display:grid;gap:14px;max-width:560px}
 label{font-weight:600;font-size:15px;display:grid;gap:4px}
-input,textarea{font:inherit;font-weight:400;padding:12px 14px;border:2px solid #d9d9d2;border-radius:12px;background:#fff}
-input:focus,textarea:focus{border-color:var(--sea-d);outline:none}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+input,select,textarea{font:inherit;font-weight:400;padding:12px 14px;border:2px solid #d9d9d2;border-radius:12px;background:#fff}
+input:focus,select:focus,textarea:focus{border-color:var(--sea-d);outline:none}
 .wa{background:#25d366;color:#fff}
 .wa:hover{background:#1fb858}
 .direct p{margin:6px 0}
+.social{display:flex;gap:14px;margin:14px 0 10px}.social a{width:46px;height:46px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;transition:background .2s}.social a:hover{background:var(--sea-d)}.social svg{width:22px;height:22px}footer .social a{background:#333}
 .map{width:100%;height:380px;border:0;border-radius:var(--r);margin-top:56px;background:var(--sand)}
 footer{text-align:center;padding:36px 5vw;font-size:14px;background:var(--ink);color:#ddd}
 .hp{position:absolute;left:-9999px}
@@ -91,13 +93,13 @@ html[lang=en] [data-el]{display:none}
 
 <main id="top">
 <div class="hero">
-  <div class="slide on" style="background-image:url(img/hero.jpg);background-position:center 42%"></div>
-  <div class="slide" style="background-image:url(img/in-terrace.jpg)"></div>
-  <div class="slide" style="background-image:url(img/isl-beach.jpg);background-position:center 60%"></div>
+  <div class="slide on" style="background-image:url(img/hero-terrace.jpg);background-position:center 60%"></div>
+  <div class="slide" style="background-image:url(img/hero-property.jpg)"></div>
+  <div class="slide" style="background-image:url(img/hero-aerial.jpg)"></div>
+  <div class="slide" style="background-image:url(img/hero-sunset.jpg);background-position:center 55%"></div>
   <div class="txt">
-    <img class="badge" src="logo.png" alt="Kalypso &amp; friends Samos">
-    <h1><span data-el>Καλοκαίρι στη Σάμο και το μπλε του Αιγαίου.</span><span data-en>Summer in Samos and the Aegean blue.</span></h1>
-    <p><span data-el>Διαμερίσματα με θέα στη θάλασσα, στις Πεταλίδες.</span><span data-en>Sea-view apartments in Petalides.</span></p>
+    <h1><span data-el>Άφησε τον χρόνο να κυλήσει. Νιώσε το καλοκαίρι.</span><span data-en>Slow down, feel summer</span></h1>
+    <p><span data-el>Διαμερίσματα με θέα το μπλε του Αιγαίου, στις Πεταλίδες</span><span data-en>Nine sea-view private apartments and a villa at Petalides</span></p>
     <a class="btn" data-book href="#contact"><span data-el>Ζητήστε διαθεσιμότητα</span><span data-en>Check availability</span></a>
     <a class="btn ghost" href="#apartments"><span data-el>Δείτε τα διαμερίσματα</span><span data-en>See the apartments</span></a>
   </div>
@@ -105,8 +107,18 @@ html[lang=en] [data-el]{display:none}
 
 <section class="intro">
   <div class="wrap">
-    <h2><span data-el>Kalypso &amp; friends</span><span data-en>Kalypso &amp; friends</span></h2>
-    <p class="lead"><span data-el>Εννέα ανεξάρτητα, κλιματιζόμενα διαμερίσματα στις Πεταλίδες, με εξοπλισμένη κουζίνα, Wi-Fi και μπαλκόνι με θέα στη θάλασσα. Ένα απλό, ήσυχο μέρος για καλοκαίρι με φίλους και οικογένεια.</span><span data-en>Nine independent, air-conditioned apartments in Petalides, each with a fully equipped kitchen, Wi-Fi and a balcony facing the sea. A simple, quiet base for a summer with friends and family.</span></p>
+    <h2>Kalypso &amp; friends</h2>
+    <h3 class="tag"><span data-el>Σε περιμένουμε στις Πεταλίδες!</span><span data-en>Join us at Petalides!</span></h3>
+    <p class="lead"><span data-el>Ένα ήσυχο καταφύγιο για ξέγνοιαστες στιγμές με την οικογένεια και τους φίλους σου, που αποτελείται από εννέα ανεξάρτητα, κλιματιζόμενα διαμερίσματα και μία βίλα με θέα στη θάλασσα.</span><span data-en>A quiet retreat for care-free moments with your family and friends, featuring nine independent, air-conditioned apartments and a villa with sea-view.</span></p>
+    <p class="lead"><span data-el>Άφησε πίσω την καθημερινότητα. Περιπλανήσου ανάμεσα στις ελιές και τα αμπέλια, βυθίσου σε ένα βιβλίο δίπλα στην πισίνα, απόλαυσε ένα ποτό στο ηλιοβασίλεμα και γεύσου καλό φαγητό στην ταβέρνα.</span><span data-en>Leave the daily routine behind. Wander through the olive groves and vineyards, get lost in a book by the pool, enjoy a drink at sunset, and savor good food at the taverna.</span></p>
+    <div class="gal six">
+      <img src="img/isl-mountain.jpg" alt="Βουνό της Σάμου / Samos mountains" loading="lazy">
+      <img src="img/in-pool-book.jpg" alt="Ανάγνωση δίπλα στην πισίνα / Reading by the pool" loading="lazy">
+      <img src="img/isl-sunset-wine.jpg" alt="Ηλιοβασίλεμα με κρασί / Sunset with a glass of wine" loading="lazy">
+      <img src="img/isl-vineyard.jpg" alt="Αμπέλια / Vineyard" loading="lazy">
+      <img src="img/in-pool-fun.jpg" alt="Βουτιές στην πισίνα / Jumping into the pool" loading="lazy">
+      <img src="img/out-pergola.jpg" alt="Πέργκολα με θέα / Pergola with a sea view" loading="lazy" style="object-position:center 40%">
+    </div>
   </div>
 </section>
 
@@ -115,7 +127,7 @@ html[lang=en] [data-el]{display:none}
     <h2><span data-el>Τα διαμερίσματά μας</span><span data-en>Our apartments</span></h2>
     <div class="apts">
       <article class="apt">
-        <img src="img/apt-double.jpg" alt="Δίκλινο διαμέρισμα με μπαλκόνι / Double apartment with balcony" loading="lazy">
+        <img src="img/apt-double.jpg" alt="Δίκλινο διαμέρισμα / Double apartment" style="object-position:center 55%" loading="lazy">
         <h3><span data-el>Δίκλινα διαμερίσματα</span><span data-en>Double apartments</span></h3>
         <p class="cap"><span data-el>5 διαμερίσματα, έως 2 άτομα</span><span data-en>5 apartments, up to 2 guests</span></p>
         <ul><li>A/C</li><li>Wi-Fi</li><li><span data-el>Εξοπλισμένη κουζίνα</span><span data-en>Equipped kitchen</span></li><li><span data-el>Μπαλκόνι με θέα θάλασσα</span><span data-en>Sea-view balcony</span></li></ul>
@@ -132,10 +144,10 @@ html[lang=en] [data-el]{display:none}
     <h3 class="sub"><span data-el>Μέσα στα διαμερίσματα</span><span data-en>Inside the apartments</span></h3>
     <div class="gal">
       <img src="img/in-room.jpg" alt="Δωμάτιο / Room" loading="lazy">
-      <img src="img/in-kitchen.jpg" alt="Κουζίνα / Kitchen" style="object-position:center 55%" loading="lazy">
-      <img src="img/in-terrace.jpg" alt="Βεράντα με θέα θάλασσα / Terrace with sea view" loading="lazy">
+      <img src="img/in-kitchen-a.jpg" alt="Κουζίνα / Kitchen" loading="lazy">
+      <img src="img/in-balcony.jpg" alt="Μπαλκόνι με θέα θάλασσα / Balcony with sea view" loading="lazy">
       <img src="img/in-breakfast.jpg" alt="Πρωινό στο μπαλκόνι / Breakfast on the balcony" loading="lazy">
-      <img src="img/in-bed.jpg" alt="Κρεβάτια / Beds" loading="lazy">
+      <img src="img/in-twin.jpg" alt="Δωμάτιο με δύο κρεβάτια / Twin room" loading="lazy">
       <img src="img/out-building.jpg" alt="Τα διαμερίσματα στο λιόγερμα / The apartments at sunset" loading="lazy">
     </div>
   </div>
@@ -154,12 +166,14 @@ html[lang=en] [data-el]{display:none}
 
 <section id="island">
   <div class="wrap">
-    <h2><span data-el>Η Σάμος και γύρω της</span><span data-en>Samos &amp; around</span></h2>
-    <p class="lead"><span data-el>Πράσινο νησί με βοτσαλωτές παραλίες, βουνά και αμπέλια. Εδώ θα μπουν οι δικές σας προτάσεις.</span><span data-en>A green island of pebble beaches, mountains and vineyards. Your own tips will go here.</span></p>
+    <h2><span data-el>Σάμος – Ένα νησί γεμάτο χρώματα, αρώματα και αυθεντική ομορφιά</span><span data-en>Samos – An Island of Nature, History and Authentic Beauty</span></h2>
+    <p class="lead"><span data-el>Καταπράσινη και μαγευτική, η Σάμος συνδυάζει εντυπωσιακά βουνά, αμπελώνες, πευκοδάση και υπέροχες βοτσαλωτές παραλίες με κρυστάλλινα νερά. Γενέτειρα του Πυθαγόρα, διαθέτει πλούσια ιστορική και πολιτιστική κληρονομιά, με σημαντικά αξιοθέατα όπως το Ηραίο και το περίφημο Ευπαλίνειο Όρυγμα, μνημεία παγκόσμιας πολιτιστικής αξίας.</span><span data-en>Lush and enchanting, Samos combines impressive mountains, vineyards, pine forests and beautiful beaches with crystal-clear waters. The birthplace of Pythagoras, the island boasts a rich cultural heritage, with remarkable landmarks such as the Heraion and the famous Tunnel of Eupalinos, both reflecting its glorious past.</span></p>
+    <p class="lead"><span data-el>Με το φημισμένο σαμιώτικο κρασί, τις γαστρονομικές παραδόσεις και τη ζεστή φιλοξενία των κατοίκων της, αποτελεί έναν ξεχωριστό προορισμό που συνδυάζει τη φύση, τον πολιτισμό και την αυθεντική εμπειρία του Αιγαίου.</span><span data-en>Renowned for its sweet Muscat wine, local gastronomy and warm hospitality, Samos is a unique destination where nature, culture and the authentic spirit of the Aegean come together.</span></p>
     <div class="tiles">
-      <div class="tile"><img src="img/isl-beach.jpg" alt="Παραλία / Beach" style="object-position:center 60%" loading="lazy"><div><h3><span data-el>Παραλίες</span><span data-en>Beaches</span></h3><p><span data-el>Οι αγαπημένες σας παραλίες.</span><span data-en>Your favourite beaches.</span></p></div></div>
-      <div class="tile"><img src="img/isl-mountain.jpg" alt="Βουνό / Mountains" loading="lazy"><div><h3><span data-el>Φύση</span><span data-en>Nature</span></h3><p><span data-el>Πεζοπορίες και χωριά.</span><span data-en>Hikes and villages.</span></p></div></div>
-      <div class="tile"><img src="img/isl-vineyard.jpg" alt="Αμπέλια / Vineyard" loading="lazy"><div><h3><span data-el>Φαγητό και κρασί</span><span data-en>Food &amp; wine</span></h3><p><span data-el>Ταβέρνες και οινοποιεία.</span><span data-en>Tavernas and wineries.</span></p></div></div>
+      <div class="tile"><img src="img/isl-cove.jpg" alt="Παραλία / Beach" loading="lazy"><div><h3><span data-el>Παραλίες</span><span data-en>Beaches</span></h3></div></div>
+      <div class="tile"><img src="img/isl-forest.jpg" alt="Φύση / Nature" loading="lazy"><div><h3><span data-el>Φύση</span><span data-en>Nature</span></h3></div></div>
+      <div class="tile"><img src="img/out-sunset-bar.jpg" alt="Φαγητό και κρασί / Food and wine" style="object-position:center 40%" loading="lazy"><div><h3><span data-el>Φαγητό και κρασί</span><span data-en>Food &amp; wine</span></h3></div></div>
+      <div class="tile"><img src="img/isl-statue.jpg" alt="Πολιτισμός / Culture" loading="lazy"><div><h3><span data-el>Πολιτισμός</span><span data-en>Culture</span></h3></div></div>
     </div>
   </div>
 </section>
@@ -167,12 +181,17 @@ html[lang=en] [data-el]{display:none}
 <section id="contact">
   <div class="wrap contact">
     <div>
-      <h2><span data-el>Μιλήστε μαζί μας</span><span data-en>Get in touch</span></h2>
-      <p class="lead"><span data-el>Πείτε μας ημερομηνίες και αριθμό ατόμων και θα σας απαντήσουμε σύντομα.</span><span data-en>Tell us your dates and number of guests and we’ll reply soon.</span></p>
+      <h2><span data-el>Επικοινώνησε μαζί μας</span><span data-en>Get in touch</span></h2>
+      <p class="lead"><span data-el>Πες μας ημερομηνίες και αριθμό ατόμων και θα σου απαντήσουμε άμεσα.</span><span data-en>Tell us your dates and number of guests and we’ll reply right away.</span></p>
       <div class="direct">
         <p><a class="btn wa" href="https://wa.me/306977542647" target="_blank" rel="noopener">WhatsApp</a></p>
         <p>✉️ <a href="mailto:samos.kalypso@gmail.com">samos.kalypso@gmail.com</a></p>
         <p>📞 <a href="tel:+306977542647">+30 697 754 2647</a></p>
+        <div class="social">
+<a href="https://www.facebook.com/Kalypsoandfriends" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.44 18.63.07 12 .07S0 5.44 0 12.07c0 5.99 4.39 10.95 10.13 11.85v-8.39H7.08v-3.46h3.05V9.43c0-3.01 1.79-4.67 4.53-4.67 1.31 0 2.69.23 2.69.23v2.95h-1.51c-1.49 0-1.96.93-1.96 1.87v2.25h3.33l-.53 3.46h-2.8v8.39C19.61 23.02 24 18.06 24 12.07z"/></svg></a>
+<a href="https://www.instagram.com/kalypsoandfriends/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+<a href="https://www.tiktok.com/@kalypsoandfriends" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.53.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+</div>
         <p>📍 <a href="https://www.google.com/maps/search/?api=1&query=Petalides+Samos" target="_blank" rel="noopener"><span data-el>Πεταλίδες, Σάμος</span><span data-en>Petalides, Samos</span></a></p>
       </div>
     </div>
@@ -181,8 +200,20 @@ html[lang=en] [data-el]{display:none}
       <p class="hp"><label>Don't fill: <input name="bot-field"></label></p>
       <label><span data-el>Όνομα</span><span data-en>Name</span><input name="name" required autocomplete="name"></label>
       <label>Email<input type="email" name="email" required autocomplete="email"></label>
-      <label><span data-el>Ημερομηνίες (από – έως)</span><span data-en>Dates (from – to)</span><input name="dates"></label>
-      <label><span data-el>Αριθμός ατόμων</span><span data-en>Guests</span><input type="number" name="guests" min="1"></label>
+      <div class="row">
+        <label><span data-el>Άφιξη</span><span data-en>Arrival</span><input type="date" name="arrival" id="arr" required></label>
+        <label><span data-el>Αναχώρηση</span><span data-en>Departure</span><input type="date" name="departure" id="dep" required></label>
+      </div>
+      <div class="row">
+        <label><span data-el>Αριθμός ατόμων</span><span data-en>Guests</span><input type="number" name="guests" min="1" max="4" required></label>
+        <label><span data-el>Διαμέρισμα</span><span data-en>Apartment</span>
+          <select name="apartment">
+            <option value="">—</option>
+            <option value="double">Δίκλινο / Double</option>
+            <option value="quad">Τετράκλινο / Quad</option>
+          </select>
+        </label>
+      </div>
       <label><span data-el>Μήνυμα</span><span data-en>Message</span><textarea name="message" rows="4"></textarea></label>
       <button class="btn" type="submit"><span data-el>Αποστολή</span><span data-en>Send</span></button>
     </form>
@@ -194,7 +225,12 @@ html[lang=en] [data-el]{display:none}
 </section>
 </main>
 
-<footer>© Kalypso &amp; friends · Πεταλίδες, Σάμος / Petalides, Samos</footer>
+<footer><div class="social" style="justify-content:center">
+<a href="https://www.facebook.com/Kalypsoandfriends" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.44 18.63.07 12 .07S0 5.44 0 12.07c0 5.99 4.39 10.95 10.13 11.85v-8.39H7.08v-3.46h3.05V9.43c0-3.01 1.79-4.67 4.53-4.67 1.31 0 2.69.23 2.69.23v2.95h-1.51c-1.49 0-1.96.93-1.96 1.87v2.25h3.33l-.53 3.46h-2.8v8.39C19.61 23.02 24 18.06 24 12.07z"/></svg></a>
+<a href="https://www.instagram.com/kalypsoandfriends/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+<a href="https://www.tiktok.com/@kalypsoandfriends" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.53.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+</div>
+© Kalypso &amp; friends · Πεταλίδες, Σάμος / Petalides, Samos</footer>
 
 <script>
 const root=document.documentElement,btn=document.getElementById('lang');
@@ -202,6 +238,9 @@ let saved;try{saved=localStorage.getItem('lang')}catch(e){}
 set(saved||((navigator.language||'el').startsWith('el')?'el':'en'));
 function set(l){root.lang=l;btn.textContent=l==='el'?'EN':'EL';try{localStorage.setItem('lang',l)}catch(e){}}
 btn.onclick=()=>set(root.lang==='el'?'en':'el');
+const arr=document.getElementById('arr'),dep=document.getElementById('dep');
+arr.min=new Date().toISOString().slice(0,10);
+arr.onchange=()=>{dep.min=arr.value;if(dep.value&&dep.value<=arr.value)dep.value=''};
 const sl=[...document.querySelectorAll('.slide')];let i=0;
 if(!matchMedia('(prefers-reduced-motion:reduce)').matches)setInterval(()=>{sl[i].classList.remove('on');i=(i+1)%sl.length;sl[i].classList.add('on')},6000);
 </script>
